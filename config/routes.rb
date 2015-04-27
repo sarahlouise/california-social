@@ -14,7 +14,16 @@ root "static_pages#home"
   patch "supperclubs/:id" => "supperclubs#update", as: :update_supperclub
   delete "supperclubs/:id" => "supperclubs#destroy", as: :delete_supperclub
 
+# ======= Event Roots ======= 
+  get "events/" => "events#index"
+  get "supperclubs/:id/events/new" => "events#new", as: :new_supperclub_event
+  post "supperclubs/:id/events" => "events#create", as: :create_supperclub_event
+  get "supperclubs/:supperclub_id/events/:id" => "events#show", as: :supperclub_event
+  get "supperclubs/:supperclub_id/events/:id/edit" => "events#edit", as: :edit_supperclub_event
+  patch "supperclubs/:supperclub_id/events/:id" => "events#update", as: :update_supperclub_event
+  delete "supperclubs/:supperclub_id/events/:id" => "events#destroy", as: :delete_supperclub_event
 
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
