@@ -23,7 +23,17 @@ root "static_pages#home"
   patch "supperclubs/:supperclub_id/events/:id" => "events#update", as: :update_supperclub_event
   delete "supperclubs/:supperclub_id/events/:id" => "events#destroy", as: :delete_supperclub_event
 
-  
+# ======= Users and Auth Routes ======= 
+post "users" => "users#create"
+get "signup" => "users#new", as: :user
+get "profile/:id" => "users#show", as: :profile
+
+
+# ======= Sessions ROUTES ======= 
+  get '/login' => 'sessions#new' 
+  post '/login' => 'sessions#create' 
+  delete '/logout' => 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
