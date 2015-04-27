@@ -7,11 +7,13 @@
   <%= csrf_meta_tags %>
   <!-- Added to ensure proper rendering and touch zoom on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!-- Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<%= render 'layouts/header' %>
-<%= yield %>
-
-</body>
+  <%= render 'layouts/header' %>
+  	<%= yield %>
+<footer>
+  <%= render 'layouts/footer' %>
+</footer>
 </html>

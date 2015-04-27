@@ -16,3 +16,90 @@
  *= require_tree .
  *= require_self
  */
+// Univeral Color Changes
+
+$off-white: #fcfbf9;
+$cul-red: #6f2415;
+
+
+body{
+	background-color: $off-white;
+}
+
+li {
+  	padding: 5px 10px 0px 10px;
+    list-style-type: none;
+  }
+
+h1  {
+    text-align: center;
+}
+
+.home-center {
+  text-align: center;
+
+}
+
+.brand {
+  color: $off-white;
+  // margin-left: 0px;
+}
+
+navbar {
+  color: $off-white;
+}
+
+navbar:a {
+    color: $off-white;
+  }
+
+.btn-main {
+	background-color: $cul-red;
+	color: $off-white;
+  margin: 10px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.btn-main:hover{
+  background-color: black;
+  color: $off-white;
+ 
+  }
+
+
+.btn {
+	border: 3px $off-white solid;
+	color: $off-white;
+}
+
+.image {
+  max-width: 100%;
+}
+
+/*HOMEPAGE STYLING*/
+#home {
+  color: $off-white; 
+  background: url('https://s3-us-west-1.amazonaws.com/culaccini/wine-swirl-bg-2.gif') center center no-repeat;
+  min-height: 600px;
+  background-size: cover;
+
+  & h1 {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 100px;
+    padding-top: 50px;
+    margin-top: 0px
+
+    & button {
+      padding: 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+.footer {
+	margin-bottom: 20px;
+  position: fixed;
+  margin-right: 50px;
+  }
+

@@ -15,7 +15,7 @@ class EventsController < ApplicationController
 
 	def create
 		@supperclub = Supperclub.find(params[:id])
-		@event = @supperclub.events.new(params.require(:event).permit(:name, :location, :guests, :price))
+		@event = @supperclub.events.new(params.require(:event).permit(:name, :about, :date, :time))
 		@event.save 
 		redirect_to supperclub_event_path(@supperclub, @event)
 	end
@@ -28,7 +28,7 @@ class EventsController < ApplicationController
 
 	def update
 		@event = Event.find(params[:id])
-		if @event.update_attributes(params.require(:event).permit(:name, :description, :price, :guests))
+		if @event.update_attributes(params.require(:event).permit(:name, :about, :date, :time))
 			redirect_to update_supperclub_event_path
 		else
 		  render :edit

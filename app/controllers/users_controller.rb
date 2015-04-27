@@ -15,7 +15,7 @@ def index
 	def create
   	 @user = User.new(user_params)
       if @user.save
-		 redirect_to profile_path
+		 redirect_to profile_path(:id)
 	  else render :new
 	  end
 	end

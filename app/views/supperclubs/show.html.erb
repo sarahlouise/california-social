@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+    <div class="col-lg-34">
 
-	    <h1> <%= @supperclub.name %> </h1>
+    	<h1> <%= @supperclub.name %> </h1>
 
 		<p><strong>About:</strong> <%= @supperclub.location %></p><br>
 
@@ -15,9 +15,9 @@
 		<%= link_to "Delete #{@supperclub.name}", delete_supperclub_path, method: :delete, data: {confirm: "Are you sure?"}%> <br>
 
 		<%= link_to "Edit #{@supperclub.name}", edit_supperclub_path %><br>
+
+		<%= link_to "Add An Upcoming Dinner at #{@supperclub.name}", new_supperclub_event_path %>
+
 	</div>
   </div>
 </div>
-
-<br>
-<br>

@@ -8,15 +8,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> -->
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">Culaccini</a>
     </div>
 <!-- SEARCH BAR -->
-      <form class="navbar-form navbar-left" role="search">
+<!--       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </form> -->
 <!-- END SEARCH BAR -->
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,7 +24,8 @@
 
       <ul class="nav navbar-nav navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active">
+          <li><%= link_to "ABOUT", static_pages_about_path %></li>
+            <li>
               <%= link_to "EVENTS", events_path %>
             </li>
             <li>
@@ -37,7 +38,7 @@
             <ul class="dropdown-menu" role="menu">
 
               <li>
-                <% if logged_in %> <%= link_to "#{current_user.name.upcase}", profile_path %> </li>
+                <% if logged_in %> <%= link_to "#{current_user.name.upcase}", profile_path(:id) %> </li>
               <li>
                 <%= link_to 'LOG OUT', logout_path, method: :delete %> 
                 <% else %> 

@@ -1,13 +1,14 @@
-<h1>Dinners Happening Soon</h1>
 
-<ul>
-	<% @events.each do |event| %>
-
-	<li>
-		<%= event.name %>
-		<%= link_to "More Info", supperclub_event_path(event.supperclub, event)%>
-	</li>
-
-	<% end %>
-
-</ul>
+      <h1>Happening Soon</h1>
+		<ul>
+			<% @events.each do |event| %>
+			<li>
+				<strong> <%= event.name %></strong>   |   
+				<%= event.about %><br>
+				<strong><%= link_to "More Info", supperclub_event_path(event.supperclub, event)%></strong>
+			</li>
+			<% end %>
+		  </ul>
+		</div>
+	</div>
+</div>

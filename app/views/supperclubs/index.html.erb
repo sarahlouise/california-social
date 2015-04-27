@@ -2,11 +2,13 @@
   <div class="row">
     <div class="col-m-4">
     	<h1>Los Angeles Supperclubs</h1>
+    	<br>
 		  <ul>
 			<% @supperclubs.each do |club| %>
-				<li><strong><%= club.name %></strong>  |  <%= club.about %>   |  <strong><%= link_to "More Info", supperclub_path(club)%></strong></li>
+				<li><strong><%= club.name %></strong>  |  <%= club.about %>   |  <strong><%= link_to "More Info", supperclub_path(club)%></strong></li>	<hr>
 				<% end %>
 		  </ul>
 	</div>
   </div>
 </div>
+

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 		# make a new key in our session object which gets stored in a cookie on our hard drive 
 		# we'll store the user's ID to make for a fast User.find later on 
 		session[:user_id] = user.id.to_s 
-		redirect_to events_path 
+		redirect_to static_pages_welcome_path 
 		else 
 		  redirect_to login_path 
 		end 
