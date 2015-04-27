@@ -25,15 +25,17 @@
 				</div>
 
 				<div class="form-group">
-					<%= f.label :exclusivity%>
-					<%= f.text_field :exclusivity, class: 'form-control'  %>
+					<%= f.label :email%>
+					<%= f.text_field :email, class: 'form-control'  %>
 				</div>
 
 				<div class="form-group">
-					<%= f.file_field :image %>
+					<%= f.label :exclusivity%>
+					<%= f.number_field :exclusivity, class: 'form-control'  %>
 				</div>
-
+				
 				<%= f.submit "Submit", class: "btn btn-primary" %>
 		<% end %>
-
+	</div>
+</div>
 </div>

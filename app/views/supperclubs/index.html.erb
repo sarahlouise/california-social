@@ -1,18 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+    <div class="col-m-4">
     	<h1>Los Angeles Supperclubs</h1>
-			<ul>
-				<% @supperclubs.each do |club| %>
-
-				<li>
-					<%= club.name %>
-					<%= image_tag club.image_url(:thumb) %>
-					<%= link_to "More Info", supperclub_path(club)%>
-				</li>
-
+		  <ul>
+			<% @supperclubs.each do |club| %>
+				<li><strong><%= club.name %></strong>  |  <%= club.about %>   |  <strong><%= link_to "More Info", supperclub_path(club)%></strong></li>
 				<% end %>
-		</ul>
-		</div>
+		  </ul>
 	</div>
+  </div>
 </div>

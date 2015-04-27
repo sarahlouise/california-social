@@ -1,33 +1,62 @@
-<h1>Update Information</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+		<h1>Update Information</h1>
 
-<%= form_for @supperclub do |f| %>
+		<%= form_for @supperclub do |f| %>
 
-<div>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+		<div class='form-group'>
+			<%= f.label :name %>
+			<%= f.text_field :name, class: "form_control" %>
+		</div>
+
+		<div class='form-group'> 
+			<%= f.label :location %>
+			<%= f.text_field :location, class: "form_control" %>
+		</div>
+
+		<div class='form-group'> 
+			<%= f.label :about %>
+			<%= f.text_area :about, class: "form_control" %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :website%>
+			<%= f.text_field :website, class: 'form-control'  %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :email%>
+			<%= f.text_field :email, class: 'form-control'  %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :exclusivity%>
+			<%= f.number_field :exclusivity, class: 'form-control'  %>
+		</div>
+
+		<%= f.submit "Submit", class: "btn btn-primary" %>
+
+		<% end %>
+
+		<div class: "button">
+		<br>
+		<%= link_to "Delete #{@supperclub.name}", delete_supperclub_path, method: :delete, data: {confirm: "Are you sure?"}%>
+		</div>
+	</div>
+   </div>
 </div>
 
-<div> 
-	<%= f.label :location %>
-	<%= f.text_field :location %>
-</div>
 
-<div>
-	<%= f.label :website %>
-	<%= f.text_field :website %>
-</div>
 
-<div>
-	<%= f.label :exclusivity %>
-	<%= f.text_field :exclusivity %>
-</div>
 
-<div>
-	<%= f.file_field :image %>
-</div>
 
-<%= f.submit "Submit" %>
 
-<% end %>
 
-<%= link_to "Delete #{@supperclub.name}", delete_supperclub_path, method: :delete, data: {confirm: "Are you sure?"}%>
+
+
+
+
+
+
+

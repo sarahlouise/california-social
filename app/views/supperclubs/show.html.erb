@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+
+	    <h1> <%= @supperclub.name %> </h1>
+
+		<p><strong>About:</strong> <%= @supperclub.location %></p><br>
+
+		<p><strong>Website:</strong> <%= @supperclub.website %></p><br>
+
+		<p><strong>About:</strong> <%= @supperclub.about %></p><br>
+
+		<p><strong>Exclusivity:</strong> <%= @supperclub.name %> rates a <%= @supperclub.exclusivity %> on a scale of 1 - 5.</p> 
+
+		<%= link_to "Delete #{@supperclub.name}", delete_supperclub_path, method: :delete, data: {confirm: "Are you sure?"}%> <br>
+
+		<%= link_to "Edit #{@supperclub.name}", edit_supperclub_path %><br>
+	</div>
+  </div>
+</div>
+
+<br>
+<br>
