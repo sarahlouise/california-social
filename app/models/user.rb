@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 attr_reader :password
+has_secure_password
 
 def password=(unencrypted_password) 
 	@password = unencrypted_password 

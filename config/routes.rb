@@ -5,6 +5,7 @@ root "static_pages#home"
   get 'static_pages/about'
   get 'static_pages/home'
   get 'static_pages/welcome'
+  
   # ======= Supper Club Routes ======= 
   get "supperclubs/" => "supperclubs#index", as: :all_supperclubs
   get "supperclubs/new" => "supperclubs#new", as: :new_supperclub

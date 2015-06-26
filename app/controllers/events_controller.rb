@@ -15,11 +15,10 @@ class EventsController < ApplicationController
 
 	def create
 		@supperclub = Supperclub.find(params[:id])
-		@event = @supperclub.events.new(params.require(:event).permit(:name, :about, :date, :time))
+		@event = @supperclub.events.new(event_params)
 		@event.save 
 		redirect_to supperclub_event_path(@supperclub, @event)
 	end
-
 
 	def edit
 		@event = Event.find(params[:id])
@@ -28,7 +27,7 @@ class EventsController < ApplicationController
 
 	def update
 		@event = Event.find(params[:id])
-		if @event.update_attributes(params.require(:event).permit(:name, :about, :date, :time))
+		if @event.update_attributes(event_params)
 			redirect_to update_supperclub_event_path
 		else
 		  render :edit
@@ -40,5 +39,11 @@ class EventsController < ApplicationController
 		@event.destroy
 		redirect_to events_path
 	end
+
+	private
+	def event_params
+		params.require(:event).permit(:name, :about, :date, :time)
+	end
+
 
 end
